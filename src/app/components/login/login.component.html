@@ -1,0 +1,26 @@
+<div class="content-login">
+
+    <img class="logo-project" src="assets/img/project.png" alt="Brainov">
+
+    <mat-card class="login-card">
+        <mat-card-content>
+            <form class="login-form">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Usuário" [(ngModel)]="username" name="username" required>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Senha" [(ngModel)]="password" type="password" name="password" required>
+                </mat-form-field>
+            </form>
+            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+            <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+            <button mat-raised-button (click)="login()" color="primary">Login</button>
+        </mat-card-content>
+    </mat-card>
+
+    <div class="content-logo-brainov">
+        <img class="logo-brainov" src="assets/img/brainov.png" alt="Brainov">
+        <span>Desenvolvido por <a href="https://www.brainov.net/" target="_blank">Brainov</a></span>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div *ngFor="let alert of alerts" class="{{ cssClass(alert) }} alert-dismissable" dismiss-on-timeout="2000" >
+    <mat-icon>{{iconByType(alert)}}</mat-icon>
+    <span>{{alert.message}}</span>
+    <button type="button" class="close-alert" (click)="removeAlert(alert)">×</button>
+</div>

@@ -1,0 +1,63 @@
+.alert {
+    width: 500px;
+    padding: 0px 15px 0px 15px;
+    margin-left: 30px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+  }
+  .alert-success {
+    background-color: #28528cb3;
+    color: #219221;
+  }
+  .alert-warning {
+    background-color: #28528cb3;
+    color: #a07415;
+  }
+  .alert-danger {
+    background-color: #28528cb3;
+    color: #d42822;
+  }
+  
+  .alert mat-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .alert span {
+    font-weight: 500;
+  }
+  .alert i {
+    padding-right: 5px;
+    vertical-align: middle;
+    font-size: 24px;
+  }
+
+  .alert .close-alert {
+    -webkit-appearance: none;
+    position: relative;
+    float: right;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+    background: 0 0;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    filter: alpha(opacity=40);
+    opacity: .4;
+    padding-top: 5px;
+  }
+  .alert .close-alert:hover {
+    filter: alpha(opacity=70);
+    opacity: .7;
+  }
+  
+  .shadow-1, .alert {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .shadow-2, .alert:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }

@@ -1,0 +1,22 @@
+<div *ngIf="currentUser">
+    <div class="header-background"></div>
+    <div class="page-background"></div>
+    <header>
+        <app-toolbar></app-toolbar>
+    </header>
+    <aside>
+        <app-menu></app-menu>
+    </aside>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="page-footer">
+        <a>© 2019 Brainov. Todos os direitos reservados.</a>
+        <a href="#">Termos &amp; Privacidade</a>
+        <a href="#">Sobre</a>
+    </footer>
+</div>
+<app-login *ngIf="!currentUser"></app-login>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#1bb1e7" type="ball-running-dots" [fullScreen]="true">
+    <!-- <p style="color: white"> Salvando... </p> -->
+</ngx-spinner>

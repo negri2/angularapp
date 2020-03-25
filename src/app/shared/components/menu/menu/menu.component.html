@@ -1,0 +1,17 @@
+<div class="menu">
+    <ul>
+        <li class="menu-header">
+            <div class="list-header-logo">
+                <a href="">
+                    <img src="assets/img/logo-chrome.png" alt="Logo empresa">
+                </a>
+            </div>
+        </li>
+        <li *ngFor="let item of menuItems">
+            <a mat-button [routerLink]="item.route" routerLinkActive="active">
+                <mat-icon style="padding-right: 5px">{{ item.icon }}</mat-icon>
+                <span>{{ item.title }}</span>
+            </a>
+        </li>
+    </ul>
+</div>

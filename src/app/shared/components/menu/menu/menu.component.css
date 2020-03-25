@@ -1,0 +1,59 @@
+.menu {
+    width: 225px;
+    height: 100%;
+    background-color: #363740;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+    overflow-x: hidden;
+  }
+  /* .menu:hover {
+    width: 225px;
+  } */
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  .menu ul li:hover {
+    background-color: #454752;
+  }
+  .menu ul li:hover a span, .menu ul li:hover a mat-icon{
+    color: #4376f7;
+  }
+  .menu ul li.menu-header {
+    font-size: 11px;
+    background-color: #363740;
+    height: 50px;
+    display: flex;
+  }
+  .menu ul li.menu-header button {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .menu ul li.menu-header img {
+    max-width: 100px;
+    padding: 5px 5px 5px 0px;
+  }
+  .menu ul li.menu-header .list-header-logo {
+    width: 100%;
+  }
+  .menu ul li.menu-header .list-header-logo a {
+    display: flex;
+    justify-content: left;
+  }
+  .menu ul li a {
+    width: 100%;
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 10px;
+  }
+  .menu ul li a span {
+    padding: 0 8px;
+  }
+  .menu ul li a span .mat-icon {
+    padding-right: 5px;
+  }

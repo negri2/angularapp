@@ -1,0 +1,20 @@
+<mat-toolbar class="toolbar-container">
+    <div>
+        <app-alert></app-alert>
+    </div>
+    <div class="div-user">
+        <span>{{currentUser.name}}</span>
+        <a mat-icon-button [matMenuTriggerFor]="belowMenu" class="dropdownMenu">
+            <img *ngIf="currentUser.photo" src="{{currentUser.photo}}" />
+            <mat-icon *ngIf="!currentUser.photo">account_circle</mat-icon>
+        </a>
+        <mat-menu #belowMenu="matMenu" yPosition="below" class="user-menu">
+            <button mat-menu-item routerLink="user-info" routerLinkActive="active">
+                <mat-icon>face</mat-icon>Meus dados
+            </button>
+            <button mat-menu-item routerLink="login" routerLinkActive="active" style="color: red">
+                <mat-icon>directions_run</mat-icon>Sair
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
