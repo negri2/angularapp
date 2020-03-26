@@ -3,7 +3,7 @@
     min-height: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #f9f7f7;
+    background-color: transparent;
     color: #5b92de;
     font-size: 14px;
 }
@@ -22,26 +22,9 @@
 span {
     font-size: 16px;
     font-weight: lighter;
-    color:#a09e9e;
+    color:#c5c2c2
 }
 
 .div-user {
     margin-top: 10px;
-}
-
-::ng-deep .user-menu {
-    background-color: #363740 !important;
-}
-
-::ng-deep .user-menu button:hover {
-    background-color: #454752 !important;
-    color: #4376f7 !important;
-}
-
-::ng-deep .user-menu button:hover  mat-icon{
-    color: #4376f7 !important;
-}
-
-::ng-deep .user-menu button, ::ng-deep .user-menu button mat-icon {
-    color: white !important;
 }

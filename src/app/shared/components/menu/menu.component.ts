@@ -11,12 +11,12 @@ export class MenuComponent implements OnInit {
     {
       title: 'Empresas',
       icon: 'business',
-      route: 'home',
+      route: 'company',
     },
     {
       title: 'Usuários',
       icon: 'people',
-      route: 'home',
+      route: 'user',
     }
   ];
 

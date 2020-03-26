@@ -1,1 +1,133 @@
+<section class="sg-component-content">
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
 
+    <div class="form-content" *ngIf="!isLoading">
+
+        <div style="display: flex; width: 858px; justify-content: space-between;">
+            <mat-card class="card-small">
+                <mat-card-content>
+                    <h2 style="color: rgb(216, 143, 7);">35</h2>
+                </mat-card-content>
+                <mat-card-footer>
+                    <span>Clientes</span>
+                </mat-card-footer>
+            </mat-card>
+            <mat-card class="card-small">
+                <mat-card-content>
+                    <h2 style="color: rgb(35, 117, 35);">3095</h2>
+                </mat-card-content>
+                <mat-card-footer>
+                    <span>Vendas</span>
+                </mat-card-footer>
+            </mat-card>
+            <mat-card class="card-small">
+                <mat-card-content>
+                    <h2 style="color: rgb(22, 22, 207);">345</h2>
+                </mat-card-content>
+                <mat-card-footer>
+                    <span>Usuários</span>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <mat-card class="card-medium">
+                    <mat-card-title class="card-title"> Custos
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <div class="card-content-line">
+                            <span>Fornecedor: </span>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="card-content-line">
+                            <span>Frete: </span>
+                            <div>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-divider></mat-divider>
+                        <div class="card-footer-line">
+                            <span>Total: </span>
+                            <div>
+                            </div>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+
+                <mat-card class="card-medium">
+                    <mat-card-title class="card-title"> Vendas
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <div class="card-content-line">
+                            <span>Recorrentes: </span>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="card-content-line">
+                            <span>Avulsas: </span>
+                            <div>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-divider></mat-divider>
+                        <div class="card-footer-line">
+                            <span>Total: </span>
+                            <div>
+                            </div>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+            <mat-card class="card-grafh" *ngIf="pieChartData">
+                <mat-card-content>
+                    <google-chart #chart [type]="chartType" [data]="pieChartData" [columnNames]="columnNames"
+                        [options]="options" title="" width="520" height="320">
+                    </google-chart>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap;">
+            <mat-card class="card-large">
+                <mat-card-title class="card-title"> Total
+                    <mat-divider>
+                    </mat-divider>
+                </mat-card-title>
+                <mat-card-content>
+
+                    <div style="display: flex; justify-content: space-around;">
+                        <div class="card-value">
+                            <span>Com Impostos</span>
+                        </div>
+                        <div class="card-value">
+                            <span>Sem Impostos</span>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="card-large">
+                <mat-card-title class="card-title"> Economia
+                    <mat-divider>
+                    </mat-divider>
+                </mat-card-title>
+                <mat-card-content>
+
+                    <div style="display: flex; justify-content: space-around;">
+                        <div class="card-value">
+                            <span>Com Impostos</span>
+                        </div>
+                        <div class="card-value">
+                            <span>Sem Impostos</span>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+</section>

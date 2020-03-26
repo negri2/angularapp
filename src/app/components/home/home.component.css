@@ -1,0 +1,83 @@
+h2 {
+    color: white;
+    font-weight: normal;
+}
+
+.container {
+    background-color: white;
+    border-radius: 3px;
+}
+
+form {
+    padding: 24px 0 12px 0;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-grafh {
+    margin-top: 20px;
+    margin-left: 24px;
+}
+
+.card-small {
+    width: 180px;
+    margin-top: 20px;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-small h2 {
+    font-size: 32px;
+}
+
+.card-small .mat-card-footer {
+    margin: 0 -16px -12px -16px;
+}
+
+.card-small span {
+    font-size: 14px;
+    color: grey;
+}
+
+.card-large {
+    width: 385px;
+    margin-top: 20px;
+    margin-right: 24px;
+}
+
+.card-medium {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-value {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.card-value span {
+    font-size: 12px;
+}
+
+.card-content-line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.card-footer-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}

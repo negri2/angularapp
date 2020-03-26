@@ -10,6 +10,7 @@ import { NgxMaskModule } from 'ngx-mask'
 import { NgxCurrencyModule } from 'ngx-currency';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxFileHelpersModule } from 'ngx-file-helpers';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,11 +21,13 @@ import { LoginComponent } from './components/login/login.component'
 import { ErrorInterceptor } from './shared/helpers/error.interceptor';
 import { JwtInterceptor} from './shared/helpers/jwt.interceptor';
 import { NgMaterialModule } from './ngmaterialmodule';
-import { MenuComponent } from './shared/components/menu/menu/menu.component';
+import { MenuComponent } from './shared/components/menu/menu.component';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { AlertService } from './shared/services/alert/alert.service';
 import { ConfirmationDialogComponent } from './shared/components/confirmation-dialog/confirmation-dialog.component';
 import { AlertComponent } from './shared/components/alert/alert.component';
+import { UserComponent } from './components/user/user.component';
+import { CompanyComponent } from './components/company/company.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { AlertComponent } from './shared/components/alert/alert.component';
     MenuComponent,
     ToolbarComponent,
     ConfirmationDialogComponent,
-    AlertComponent
+    AlertComponent,
+    UserComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,7 @@ import { AlertComponent } from './shared/components/alert/alert.component';
     NgxFileHelpersModule,
     MatSortModule,
     MatTableModule,
+    GoogleChartsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -62,6 +68,7 @@ import { AlertComponent } from './shared/components/alert/alert.component';
     ApiService,
     AlertService
   ],
+  entryComponents: [ConfirmationDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

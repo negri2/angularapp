@@ -1,0 +1,98 @@
+.container h1 {
+    color: white;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color:lightgrey;
+}
+
+.header-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top:20px;
+}
+
+.header-company button {
+    width: 100px;
+}
+
+.input-search {
+    width: 350px;
+    color: white !important;
+}
+
+table {
+    width: 100%;
+}
+
+.column-actions {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.column-actions button {
+    color: #434343;
+}
+
+.mat-column-name {
+    width: 40%;
+}
+
+.mat-column-cpf {
+    width: 15%;
+}
+
+.mat-column-state {
+    width: 10%;
+}
+
+.mat-column-status {
+    width: 25%;
+}
+
+.empty-content {
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 40px;
+}
+
+.empty-content span {
+    color: #525151;
+}
+
+/* input color class */
+
+::ng-deep .header-company input.mat-input-element {
+    color: white;
+}
+
+/* Change label color on focused */
+
+::ng-deep .header-company .mat-form-field.mat-focused .mat-form-field-label {
+    color: white !important;
+}
+
+::ng-deep .header-company .mat-form-field .mat-form-field-label {
+    color: white !important;
+}
+
+/* underline border color on focused */
+
+::ng-deep .header-company .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: white !important;
+}
+
+::ng-deep .header-company .mat-form-field-underline {
+    background-color: white !important;
+}

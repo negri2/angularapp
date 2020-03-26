@@ -1,0 +1,81 @@
+<div class="container">
+    <h1>Usuários</h1>
+    <h3>consulte os usuários cadastrados</h3>
+    <div class="header-user">
+        <mat-form-field class="input-search">
+            <span matSuffix>
+                <a matSuffix (click)="searchUser()" style="cursor: pointer;">
+                    <mat-icon>search</mat-icon>
+                </a>
+            </span>
+            <input matInput placeholder="Pesquisar..." (keyup.enter)="searchUser()" [(ngModel)]="search">
+        </mat-form-field>
+
+        <button mat-raised-button (click)="add()" color="primary">Novo</button>
+    </div>
+
+    <div style="width: 100%" *ngIf="isLoading || (dataSource && dataSource.length > 0)">
+        <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" id='table-users'>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Nome </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="cpf">
+                    <th mat-header-cell *matHeaderCellDef> CPF </th>
+                    <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="state">
+                    <th mat-header-cell *matHeaderCellDef> Estado </th>
+                    <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="column-actions">
+                            <button mat-icon-button (click)="edit(element)" matTooltip="Editar">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button (click)="delete(element)" matTooltip="Excluir">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+                (page)="changePage($event)">
+            </mat-paginator>
+        </div>
+    </div>
+    <div class="empty-state" *ngIf="!isLoading && (!dataSource || dataSource.length == 0)">
+        <div class="empty-content">
+            <div>
+                <img src="assets/img/img_empty_people.png" style="max-height: 250px;" />
+            </div>
+            <div class="m-l-20 m-t-20">
+                <div class="m-b-5">
+                    <span class="text-title-no-data">Hmmmm...</span>
+                </div>
+                <div>
+                    <span class="text-subtitle-no-data">Parece que você não tem nenhum usuário cadastrado.</span>
+                </div>
+                <hr>
+                <span class="text-info-no-data">Tente o botão 'Novo' acima.</span>
+            </div>
+        </div>
+    </div>
+</div>

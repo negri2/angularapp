@@ -50,7 +50,8 @@
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: #f0f0f0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 54%, rgba(114,14,237,1) 100%);
     z-index: -1;
   }
   
